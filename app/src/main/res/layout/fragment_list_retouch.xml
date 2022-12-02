@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListAddFragment"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:minHeight="?attr/actionBarSize"
+        android:textColor="@android:color/darker_gray"
+        app:contentInsetStart="0dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="물품 목록 편집"
+            android:textSize="20sp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/Purchase_editPlane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="1dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="물건이름 입력"
+            app:layout_constraintBottom_toTopOf="@+id/expirationdate_edit_Plane"
+            app:layout_constraintEnd_toStartOf="@+id/Purchase_edit_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/expirationdate_edit_Plane"
+            android:layout_width="214dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="3dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="유통기한 입력"
+            app:layout_constraintBottom_toTopOf="@+id/inputdate_edit_Plane"
+            app:layout_constraintEnd_toStartOf="@+id/expirationdate_edit_Btn"
+            app:layout_constraintTop_toBottomOf="@+id/Purchase_editPlane" />
+
+        <EditText
+            android:id="@+id/inputdate_edit_Plane"
+            android:layout_width="212dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="넣은 날짜 입력"
+            app:layout_constraintBottom_toTopOf="@+id/freezer_coldroom_edit_Switch"
+            app:layout_constraintEnd_toStartOf="@+id/inputdate_edit_btn"
+            app:layout_constraintTop_toBottomOf="@+id/expirationdate_edit_Plane" />
+
+        <Button
+            android:id="@+id/Purchase_edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="32dp"
+            android:text="수정"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/expirationdate_edit_Btn"
+            android:layout_width="87dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:text="수정"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Purchase_edit_btn" />
+
+        <Button
+            android:id="@+id/inputdate_edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="32dp"
+            android:text="수정"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expirationdate_edit_Plane" />
+
+        <Button
+            android:id="@+id/freezer_coldroom_edit_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="251dp"
+            android:text="수정"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputdate_edit_btn" />
+
+        <Switch
+            android:id="@+id/freezer_coldroom_edit_Switch"
+            android:layout_width="215dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginBottom="251dp"
+            android:text="냉동"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/freezer_coldroom_edit_Btn"
+            app:layout_constraintTop_toBottomOf="@+id/inputdate_edit_Plane" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="71dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="99dp"
+            android:text="이름"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/Purchase_editPlane"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="71dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:text="유통기한"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/expirationdate_edit_Plane"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="205dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="71dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="5dp"
+            android:text="넣은날짜"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/inputdate_edit_Plane"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="316dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="71dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="5dp"
+            android:text="냉동/냉장"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/freezer_coldroom_edit_Switch"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="432dp"
+            tools:ignore="MissingConstraints" />
+
+        <DatePicker
+            android:id="@+id/dataPicker_retouch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:datePickerMode="calendar"
+            android:visibility = "gone"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
